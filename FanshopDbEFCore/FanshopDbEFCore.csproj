@@ -251,7 +251,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FanshopEFCoreOperations.cs" />
+    <Compile Include="FanshopEfCoreOperations.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Color.cs" />

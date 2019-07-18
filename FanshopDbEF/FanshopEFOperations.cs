@@ -3,7 +3,7 @@ using FanshopDbDataAccessLibrary.Interface;
 
 namespace FanshopDbEF
 {
-    public class FanshopEFOperations : IDbOperations
+    public class FanshopEfOperations : IDbOperations
     {
         public void AddNewRecord(BaseEntity entity)
         {

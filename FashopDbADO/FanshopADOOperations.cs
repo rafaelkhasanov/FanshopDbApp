@@ -4,7 +4,7 @@ using FanshopDbDataAccessLibrary.Interface;
 
 namespace FashopDbADO
 {
-    public class FanshopADOOperations : IDbOperations
+    public class FanshopAdoOperations : IDbOperations
     {
         public void AddNewRecord(BaseEntity entity)
         {

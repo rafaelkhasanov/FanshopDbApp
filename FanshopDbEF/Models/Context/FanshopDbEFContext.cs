@@ -2,9 +2,9 @@ namespace FanshopDbEF
 {
     using System.Data.Entity;
 
-    public partial class FanshopDbEFContext : DbContext
+    public partial class FanshopDbEfContext : DbContext
     {
-        public FanshopDbEFContext()
+        public FanshopDbEfContext()
             : base("name=FanshopDbEFContext")
         {
         }

@@ -9,9 +9,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbDataAccessLibrary"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbADO", "FashopDbADO\FanshopDbADO.csproj", "{F980D820-1C23-42E7-9163-73208248EE4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbEF", "FanshopDbEF\FanshopDbEF.csproj", "{70609909-FFD5-4DDC-8F2B-B28792E9006D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbEf", "FanshopDbEF\FanshopDbEf.csproj", "{70609909-FFD5-4DDC-8F2B-B28792E9006D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbEFCore", "FanshopDbEFCore\FanshopDbEFCore.csproj", "{9C2F7C3F-777F-4E1B-809A-767376019817}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbEfCore", "FanshopDbEFCore\FanshopDbEfCore.csproj", "{9C2F7C3F-777F-4E1B-809A-767376019817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
