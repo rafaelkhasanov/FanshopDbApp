@@ -1,0 +1,6 @@
+﻿namespace FanshopDbApp
+{
+    class DataOperation
+    {
+    }
+}
