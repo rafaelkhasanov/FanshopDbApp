@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data.Entity;
-using FanshopDbDataAccessLibrary.BaseModels;
+using FanshopBaseData.BaseModels;
 using FanshopDbEF;
 
 namespace FanshopDbDAL

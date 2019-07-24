@@ -1,12 +1,31 @@
-﻿using FanshopDbDAL;
-using FanshopDbDataAccessLibrary.BaseModels;
+﻿using System;
+using System.Configuration;
+using FanshopDbDAL;
+using FanshopBaseData.BaseModels;
 
 namespace FanshopDbRepo
 {
     public class CustomerDbOperation<T> where T: BaseCustomer
     {
         private BaseRepo<BaseCustomer> repo;
-        public CustomerDbOperation() => repo = new CustomerRepoAccessEF();
+        public CustomerDbOperation()
+        {
+            switch (ConfigurationManager.AppSettings.Get("type"))
+            {
+                case "ADO":
+                    repo = new CustomerRepoAccessADO();
+                    break;
+                case "EF":
+                    repo = new CustomerRepoAccessEF();
+                    break;
+                case "EFCore":
+                    repo = new CustomerRepoAccessEFCore();
+                    break;
+                default:
+                    Console.WriteLine("Иди домой");
+                    break;
+            }
+        }
         public void Add(BaseCustomer customer)
         {
             repo.Add(customer);

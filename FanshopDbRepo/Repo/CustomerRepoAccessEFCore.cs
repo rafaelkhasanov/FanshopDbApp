@@ -1,5 +1,5 @@
 ﻿using System;
-using FanshopDbDataAccessLibrary.BaseModels;
+using FanshopBaseData.BaseModels;
 using FanshopDbEFCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -14,7 +14,7 @@ namespace FanshopDbDAL
             context = new FanshopEFCoreContext();
             Table = context.Set<Customer>();
         }
-        public int Add(BaseCustomer entity)
+        public override int Add(BaseCustomer entity)
         {
             Table.Add(entity as Customer ?? throw new InvalidOperationException());
             return Save();

@@ -1,4 +1,4 @@
-﻿namespace FanshopDbDataAccessLibrary.BaseModels
+﻿namespace FanshopBaseData.BaseModels
 {
     public class BaseTeam : BaseEntity.BaseEntity
     {

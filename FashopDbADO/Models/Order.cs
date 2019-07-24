@@ -1,5 +1,5 @@
 ﻿using System;
-using FanshopDbDataAccessLibrary.BaseModels;
+using FanshopBaseData.BaseModels;
 
 namespace FanshopDbADO
 {

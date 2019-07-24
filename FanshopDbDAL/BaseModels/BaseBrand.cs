@@ -1,5 +1,5 @@
 ﻿
-namespace FanshopDbDataAccessLibrary.BaseModels
+namespace FanshopBaseData.BaseModels
 {
     public class BaseBrand : BaseEntity.BaseEntity
     {

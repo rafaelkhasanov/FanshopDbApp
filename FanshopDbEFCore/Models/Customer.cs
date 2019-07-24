@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using FanshopDbDataAccessLibrary.BaseModels;
+using FanshopBaseData.BaseModels;
 
 namespace FanshopDbEFCore
 {

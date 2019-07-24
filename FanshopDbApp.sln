@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbApp", "FanshopDbApp\FanshopDbApp.csproj", "{7A6711A9-B5ED-4EA6-A89A-5FBF731A14CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbDataAccessLibrary", "FanshopDbDAL\FanshopDbDataAccessLibrary.csproj", "{561688D4-C577-4B10-9C47-48C5D84B7BC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopBaseData", "FanshopDbDAL\FanshopBaseData.csproj", "{561688D4-C577-4B10-9C47-48C5D84B7BC0}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbADO", "FashopDbADO\FanshopDbADO.csproj", "{F980D820-1C23-42E7-9163-73208248EE4E}"
 EndProject

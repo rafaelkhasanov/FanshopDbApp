@@ -123,9 +123,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FanshopDbDAL\FanshopDbDataAccessLibrary.csproj">
+    <ProjectReference Include="..\FanshopDbDAL\FanshopBaseData.csproj">
       <Project>{561688d4-c577-4b10-9c47-48c5d84b7bc0}</Project>
-      <Name>FanshopDbDataAccessLibrary</Name>
+      <Name>FanshopBaseData</Name>
     </ProjectReference>
     <ProjectReference Include="..\FanshopDbEFCore\FanshopDbEfCore.csproj">
       <Project>{9c2f7c3f-777f-4e1b-809a-767376019817}</Project>

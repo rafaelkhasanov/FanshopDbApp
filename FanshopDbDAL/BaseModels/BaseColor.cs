@@ -1,4 +1,4 @@
-﻿namespace FanshopDbDataAccessLibrary.BaseModels
+﻿namespace FanshopBaseData.BaseModels
 {
     public class BaseColor : BaseEntity.BaseEntity
     {

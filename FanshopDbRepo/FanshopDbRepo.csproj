@@ -133,9 +133,9 @@
     <Compile Include="Repo\CustomerRepoAccessEFCore.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FanshopDbDAL\FanshopDbDataAccessLibrary.csproj">
+    <ProjectReference Include="..\FanshopDbDAL\FanshopBaseData.csproj">
       <Project>{561688D4-C577-4B10-9C47-48C5D84B7BC0}</Project>
-      <Name>FanshopDbDataAccessLibrary</Name>
+      <Name>FanshopBaseData</Name>
     </ProjectReference>
     <ProjectReference Include="..\FanshopDbEFCore\FanshopDbEfCore.csproj">
       <Project>{9c2f7c3f-777f-4e1b-809a-767376019817}</Project>

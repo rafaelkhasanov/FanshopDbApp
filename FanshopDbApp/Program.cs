@@ -1,48 +1,36 @@
 ﻿using System;
-using FanshopDbDataAccessLibrary.BaseModels;
+using System.Configuration;
+using FanshopBaseData.BaseModels;
+using FanshopDbADO;
 using FanshopDbEF;
+using FanshopDbEFCore;
 using FanshopDbRepo;
 
 namespace FanshopDbApp
 {
     class Program
     {
-        static void Main(string[] args)
+        static BaseCustomer customer;
+        static void Main()
         {
-            BaseCustomer customer = new Customer()
+            var customerOperation = new CustomerDbOperation<BaseCustomer>();
+            customerOperation.Add(customer);
+        }
+        public Program()
+        {
+            switch (ConfigurationManager.AppSettings.Get("type"))
             {
-                FirstName = "Rafael",
-                LastName = "Khasanov",
-                Email = "rapraprafraf@gmail.com",
-                DateOfBirth = null
-            };
-            var custOper = new CustomerDbOperation<BaseCustomer>();
-            custOper.Add(customer);
-            //Console.ReadLine();
-            #region if (ConfigurationManager.ConnectionStrings["FanshopDbADO"].)
-            //{
+                case "ADO": customer = new FanshopDbADO.Customer();
+                    break;
+                case "EF": customer = new FanshopDbEF.Customer();
+                    break;
+                case "EFCore": customer = new FanshopDbEFCore.Customer();
+                    break;
+                default:
+                    Console.WriteLine("Иди домой");
+                    break;
+            }
 
-            //}
-            //using (FanshopEfOperations<Customer> operCust = new FanshopEfOperations<FanshopDbEF.Customer>())
-            //{
-            //    FanshopDbEF.Customer customer = (FanshopDbEF.Customer)cust;
-            //    operCust.Add(customer);
-            //}
-
-            //using (FanshopEfOperations<FanshopDbEFCore.Customer> operCust = new FanshopEfOperations<FanshopDbEFCore.Customer>())
-            //{
-            //    operCust.Add((FanshopDbEFCore.Customer)cust);
-            //}
-
-            //Console.ReadLine();
-
-            //using (var custo = new CustomerOperationADO())
-            //{
-            //    custo.Add((FanshopDbADO.Customer) cust);
-            //}
-            //DatabaseOperation<BaseCustomer> black = new DatabaseOperation<BaseCustomer>();
-            //black.Add(cust);
-            #endregion
         }
     }
 }

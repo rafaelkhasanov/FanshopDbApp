@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FanshopDbDataAccessLibrary.BaseModels
+namespace FanshopBaseData.BaseModels
 {
     public class BaseProduct : BaseEntity.BaseEntity
     {

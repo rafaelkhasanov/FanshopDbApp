@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FanshopDbDataAccessLibrary.Interface
+namespace FanshopBaseData.Interface
 {
     public interface IDbOperations<T> : IDisposable
     {

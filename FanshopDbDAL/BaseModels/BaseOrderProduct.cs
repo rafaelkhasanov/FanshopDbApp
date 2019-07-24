@@ -1,7 +1,7 @@
 ﻿
 using System.ComponentModel;
 
-namespace FanshopDbDataAccessLibrary.BaseModels
+namespace FanshopBaseData.BaseModels
 {
     public class BaseOrderProduct : BaseEntity.BaseEntity
     {
