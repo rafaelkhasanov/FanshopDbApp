@@ -10,7 +10,7 @@ namespace FanshopDbRepo
         private BaseRepo<BaseCustomer> repo;
         public CustomerDbOperation()
         {
-            switch (ConfigurationManager.AppSettings.Get("type"))
+            switch (ConfigurationManager.AppSettings.Get("AccessType"))
             {
                 case "ADO":
                     repo = new CustomerRepoAccessADO();

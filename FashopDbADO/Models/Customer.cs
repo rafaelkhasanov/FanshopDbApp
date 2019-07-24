@@ -10,5 +10,14 @@ namespace FanshopDbADO
         public string Phone { get; set; }
         public string Email { get; set; }
         public DateTime? DateOfBirth { get; set; }
+
+        public Customer(string firstName, string lastName, string phone, string email, DateTime? dateOfBirth)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Phone = phone;
+            Email = email;
+            DateOfBirth = dateOfBirth;
+        }
     }
 }

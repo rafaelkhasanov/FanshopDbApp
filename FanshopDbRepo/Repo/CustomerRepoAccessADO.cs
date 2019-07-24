@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using FanshopBaseData.BaseModels;
+using FanshopDbADO;
 
 namespace FanshopDbDAL
 {
@@ -17,17 +18,17 @@ namespace FanshopDbDAL
         {
             OpenConnection();
             sqlQuery = $"INSERT INTO Customer (FirstName, LastName, Phone, Email) " +
-                $"VALUES (@FirstName, @LastName, @Phone, @Email, @DateOfBirth)";
-            using (command = new SqlCommand(sqlQuery))
+                $"VALUES (@FirstName, @LastName, @Phone, @Email)";
+            using (command = new SqlCommand(sqlQuery, connect))
             {
-                parameters = GetParameters(entity);
+                parameters = GetParameters(entity as Customer);
                 command.Parameters.AddRange(parameters);
                 result = command.ExecuteNonQuery();
                 CloseConnection();
                 return result;
             }
         }
-        private SqlParameter[] GetParameters(BaseCustomer customer) =>
+        private SqlParameter[] GetParameters(Customer customer) =>
             new SqlParameter[]
             {
                 new SqlParameter()
@@ -61,14 +62,6 @@ namespace FanshopDbDAL
                     SqlDbType = SqlDbType.NVarChar,
                     Size = 100,
                     Value = customer.Email,
-                },
-
-                new SqlParameter()
-                {
-                    ParameterName = "@DateOfBirth",
-                    SqlDbType = SqlDbType.Date,
-                    IsNullable = true,
-                    Value = customer.DateOfBirth
                 }
             };
         private void OpenConnection()

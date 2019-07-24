@@ -145,6 +145,10 @@
       <Project>{70609909-FFD5-4DDC-8F2B-B28792E9006D}</Project>
       <Name>FanshopDbEf</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FashopDbADO\FanshopDbADO.csproj">
+      <Project>{f980d820-1c23-42e7-9163-73208248ee4e}</Project>
+      <Name>FanshopDbADO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -10,6 +10,14 @@ namespace FanshopDbEF
     [Table("Customer")]
     public class Customer : BaseCustomer
     {
+        public Customer(string firstName, string lastName, string phone, string email, DateTime? dateOfBirth)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            Phone = phone;
+            Email = email;
+            DateOfBirth = dateOfBirth;
+        }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Customer() => Orders = new HashSet<Order>();
 
