@@ -22,7 +22,7 @@ namespace FanshopDbDAL
         }
         public override BaseCustomer GetOne(int? id) => Table.Find(id);
         public override int Save() => context.SaveChanges();
-        public void Dispose()
+        public override void Dispose()
         {
             context?.Dispose();
         }

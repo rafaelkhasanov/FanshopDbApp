@@ -19,9 +19,9 @@ namespace FanshopDbDAL
             Table.Add(entity as Customer ?? throw new InvalidOperationException());
             return Save();
         }
-        public Customer GetOne(int? id) => Table.Find(id);
-        public int Save() => context.SaveChanges();
-        public void Dispose()
+        public override BaseCustomer GetOne(int? id) => Table.Find(id);
+        public override int Save() => context.SaveChanges();
+        public override void Dispose()
         {
             context?.Dispose();
         }

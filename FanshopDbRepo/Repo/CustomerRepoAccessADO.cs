@@ -13,7 +13,6 @@ namespace FanshopDbDAL
         private SqlParameter[] parameters;
         private SqlConnection connect;
         private int result;
-
         public override int Add(BaseCustomer entity)
         {
             OpenConnection();

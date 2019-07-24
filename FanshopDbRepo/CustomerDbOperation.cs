@@ -29,6 +29,7 @@ namespace FanshopDbRepo
         public void Add(BaseCustomer customer)
         {
             repo.Add(customer);
+            repo.Dispose();
         }
     }
 }
