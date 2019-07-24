@@ -1,6 +1,8 @@
-﻿namespace FanshopDbDataAccessLibrary.BaseModels
+﻿using FanshopDbDataAccessLibrary.BaseModels;
+
+namespace FanshopDbADO
 {
-    public class BaseTeam : BaseEntity.BaseEntity
+    public class Team : BaseTeam
     {
         public string TeamName { get; set; }
         public string TeamCity { get; set; }

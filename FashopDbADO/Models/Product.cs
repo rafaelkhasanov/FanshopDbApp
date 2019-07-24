@@ -1,8 +1,9 @@
 ﻿using System;
+using FanshopDbDataAccessLibrary.BaseModels;
 
-namespace FanshopDbDataAccessLibrary.BaseModels
+namespace FanshopDbADO
 {
-    public class BaseProduct : BaseEntity.BaseEntity
+    public class Product : BaseProduct
     {
         public Guid Code { get; set; }
         public string Title { get; set; }

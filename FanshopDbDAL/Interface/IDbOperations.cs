@@ -1,9 +1,11 @@
-﻿using FanshopDbDataAccessLibrary.BaseModels.BaseEntity;
+﻿using System;
 
 namespace FanshopDbDataAccessLibrary.Interface
 {
-    public interface IDbOperations
+    public interface IDbOperations<T> : IDisposable
     {
-        void AddNewRecord(BaseEntity entity);
+        int Add(T entity);
+        int Save();
+        T GetOne(int? id);
     }
 }

@@ -1,8 +1,9 @@
 ﻿using System;
+using FanshopDbDataAccessLibrary.BaseModels;
 
-namespace FanshopDbDataAccessLibrary.BaseModels
+namespace FanshopDbADO
 {
-    public class BaseOrder : BaseEntity.BaseEntity
+    public class Order : BaseOrder
     {
         public int CustomerId { get; set; }
         public int StatusId { get; set; }

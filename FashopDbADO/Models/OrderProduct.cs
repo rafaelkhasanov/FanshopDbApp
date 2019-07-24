@@ -1,12 +1,10 @@
 ﻿
-using System.ComponentModel;
+using FanshopDbDataAccessLibrary.BaseModels;
 
-namespace FanshopDbDataAccessLibrary.BaseModels
+namespace FanshopDbADO
 {
-    public class BaseOrderProduct : BaseEntity.BaseEntity
+    public class OrderProduct : BaseOrderProduct
     {
-        [Browsable(false)]
-        private new int Id {get; set;}
         public int OrderId { get; set; }
         public int ProductId { get; set; }
         public int CountProduct { get; set; }

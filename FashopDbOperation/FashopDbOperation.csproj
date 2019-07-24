@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{561688D4-C577-4B10-9C47-48C5D84B7BC0}</ProjectGuid>
+    <ProjectGuid>{D9ED5C91-B36F-48BB-AF28-BC8421CE5A38}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FanshopDbDAL</RootNamespace>
-    <AssemblyName>FanshopDbDAL</AssemblyName>
+    <RootNamespace>FashopDbOperation</RootNamespace>
+    <AssemblyName>FashopDbOperation</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore, Version=2.2.6.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.2.2.6\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.EntityFrameworkCore.Abstractions, Version=2.2.6.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.EntityFrameworkCore.Abstractions.2.2.6\lib\netstandard2.0\Microsoft.EntityFrameworkCore.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.Caching.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Caching.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Caching.Abstractions.dll</HintPath>
     </Reference>
@@ -104,18 +116,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseModels\BaseEntity\BaseEntity.cs" />
-    <Compile Include="Interface\IDbOperations.cs" />
-    <Compile Include="BaseModels\BaseBrand.cs" />
-    <Compile Include="BaseModels\BaseCategory.cs" />
-    <Compile Include="BaseModels\BaseColor.cs" />
-    <Compile Include="BaseModels\BaseCustomer.cs" />
-    <Compile Include="BaseModels\BaseOrder.cs" />
-    <Compile Include="BaseModels\BaseOrderProduct.cs" />
-    <Compile Include="BaseModels\BaseOrderStatus.cs" />
-    <Compile Include="BaseModels\BaseProduct.cs" />
-    <Compile Include="BaseModels\BaseTeam.cs" />
+    <Compile Include="DatabaseOperation.cs" />
+    <Compile Include="FanshopAdoOperations.cs" />
+    <Compile Include="FanshopEfCoreOperations.cs" />
+    <Compile Include="FanshopEfOperations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FanshopDbDAL\FanshopDbDataAccessLibrary.csproj">
+      <Project>{561688d4-c577-4b10-9c47-48c5d84b7bc0}</Project>
+      <Name>FanshopDbDataAccessLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FanshopDbEFCore\FanshopDbEfCore.csproj">
+      <Project>{9c2f7c3f-777f-4e1b-809a-767376019817}</Project>
+      <Name>FanshopDbEfCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FanshopDbEF\FanshopDbEf.csproj">
+      <Project>{70609909-ffd5-4ddc-8f2b-b28792e9006d}</Project>
+      <Name>FanshopDbEf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FashopDbADO\FanshopDbADO.csproj">
+      <Project>{f980d820-1c23-42e7-9163-73208248ee4e}</Project>
+      <Name>FanshopDbADO</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

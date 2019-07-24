@@ -251,12 +251,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FanshopEfCoreOperations.cs" />
     <Compile Include="Models\Brand.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Color.cs" />
     <Compile Include="Models\Customer.cs" />
-    <Compile Include="Models\Context\FanshopDemoDbContext.cs" />
+    <Compile Include="Models\Context\FanshopEFCoreContext.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderProduct.cs" />
     <Compile Include="Models\OrderStatus.cs" />

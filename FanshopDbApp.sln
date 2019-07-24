@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbEf", "FanshopDbEF\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbEfCore", "FanshopDbEFCore\FanshopDbEfCore.csproj", "{9C2F7C3F-777F-4E1B-809A-767376019817}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FanshopDbRepo", "FanshopDbRepo\FanshopDbRepo.csproj", "{312486F6-AA0B-4E46-880B-85B5B5709493}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{9C2F7C3F-777F-4E1B-809A-767376019817}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C2F7C3F-777F-4E1B-809A-767376019817}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C2F7C3F-777F-4E1B-809A-767376019817}.Release|Any CPU.Build.0 = Release|Any CPU
+		{312486F6-AA0B-4E46-880B-85B5B5709493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{312486F6-AA0B-4E46-880B-85B5B5709493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{312486F6-AA0B-4E46-880B-85B5B5709493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{312486F6-AA0B-4E46-880B-85B5B5709493}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

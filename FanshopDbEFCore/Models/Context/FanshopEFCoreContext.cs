@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FanshopDbEFCore
 {
-    public partial class FanshopDemoDbContext : DbContext
+    public partial class FanshopEFCoreContext : DbContext
     {
-        public FanshopDemoDbContext()
+        public FanshopEFCoreContext()
         {
         }
 
-        public FanshopDemoDbContext(DbContextOptions<FanshopDemoDbContext> options)
+        public FanshopEFCoreContext(DbContextOptions<FanshopEFCoreContext> options)
             : base(options)
         {
         }
@@ -27,7 +27,7 @@ namespace FanshopDbEFCore
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
-                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["FanshopDemoDbConnection"].ConnectionString);
+                optionsBuilder.UseSqlServer(ConfigurationManager.ConnectionStrings["EFCoreConnection"].ConnectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
