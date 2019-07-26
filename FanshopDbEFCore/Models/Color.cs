@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
-using FanshopBaseData.BaseModels;
 
 namespace FanshopDbEFCore
 {
-    public class Color : BaseColor
+    public class Color
     {
+        public int Id { get; set; }
+        public string ColorName { get; set; }
         public Color() => Product = new HashSet<Product>();
         public virtual ICollection<Product> Product { get; set; }
     }

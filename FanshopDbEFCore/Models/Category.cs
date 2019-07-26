@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
-using FanshopBaseData.BaseModels;
 
 namespace FanshopDbEFCore
 {
-    public class Category : BaseCategory
+    public class Category
     {
+        public int Id { get; set; }
+        public string CategoryName { get; set; }
         public Category() => Product = new HashSet<Product>();
         public virtual ICollection<Product> Product { get; set; }
     }

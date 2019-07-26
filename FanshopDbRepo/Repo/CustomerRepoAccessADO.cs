@@ -1,8 +1,7 @@
-﻿using System.Configuration;
+﻿using FanshopBaseData.BaseModels;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using FanshopBaseData.BaseModels;
-using FanshopDbADO;
 
 namespace FanshopDbDAL
 {

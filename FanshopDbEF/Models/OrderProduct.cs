@@ -1,12 +1,13 @@
-using FanshopBaseData.BaseModels;
-
-namespace FanshopDbEF
+namespace FanshopDbEF.Models
 {
+    using System;
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     [Table("OrderProduct")]
-    public class OrderProduct : BaseOrderProduct
+    public partial class OrderProduct
     {
         [Key]
         [Column(Order = 0)]
@@ -17,6 +18,8 @@ namespace FanshopDbEF
         [Column(Order = 1)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int ProductId { get; set; }
+
+        public int CountProduct { get; set; }
 
         [Column(TypeName = "money")]
         public decimal UnitPrice { get; set; }

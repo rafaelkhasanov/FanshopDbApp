@@ -1,10 +1,11 @@
 ﻿using System.Collections.Generic;
-using FanshopBaseData.BaseModels;
 
 namespace FanshopDbEFCore
 {
-    public class OrderStatus : BaseOrderStatus
+    public class OrderStatus
     {
+        public int Id { get; set; }
+        public string StatusName { get; set; }
         public OrderStatus() => Order = new HashSet<Order>();
         public virtual ICollection<Order> Order { get; set; }
     }

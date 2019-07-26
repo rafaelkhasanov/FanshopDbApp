@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F980D820-1C23-42E7-9163-73208248EE4E}</ProjectGuid>
+    <ProjectGuid>{70609909-FFD5-4DDC-8F2B-B28792E9006D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FashopDbADO</RootNamespace>
-    <AssemblyName>FashopDbADO</AssemblyName>
+    <RootNamespace>FanshopDbEF</RootNamespace>
+    <AssemblyName>FanshopDbEF</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,9 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Configuration" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,10 +50,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Color.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\Context\FanshopEFContext.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\OrderProduct.cs" />
+    <Compile Include="Models\OrderStatus.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Team.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FanshopDbDAL\FanshopBaseData.csproj">

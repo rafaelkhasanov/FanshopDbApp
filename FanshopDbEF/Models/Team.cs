@@ -1,16 +1,21 @@
-using FanshopBaseData.BaseModels;
-
-namespace FanshopDbEF
+namespace FanshopDbEF.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     [Table("Team")]
-    public class Team : BaseTeam
+    public partial class Team
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Team() => Products = new HashSet<Product>();
+        public Team()
+        {
+            Products = new HashSet<Product>();
+        }
+
+        public int Id { get; set; }
 
         [Required]
         [StringLength(30)]

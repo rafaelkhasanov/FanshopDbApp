@@ -1,17 +1,21 @@
-using FanshopBaseData.BaseModels;
-
-namespace FanshopDbEF
+namespace FanshopDbEF.Models
 {
+    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     [Table("Color")]
-    public class Color : BaseColor
+    public partial class Color
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage",
-            "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Color() => Products = new HashSet<Product>();
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Color()
+        {
+            Products = new HashSet<Product>();
+        }
+
+        public int Id { get; set; }
 
         [Required]
         [StringLength(15)]

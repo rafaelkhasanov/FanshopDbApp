@@ -1,4 +1,4 @@
-namespace FanshopDbEF
+namespace FanshopDbEF.Models
 {
     using System.Data.Entity;
 

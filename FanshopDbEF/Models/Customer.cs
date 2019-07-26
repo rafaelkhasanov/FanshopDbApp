@@ -1,25 +1,21 @@
-using FanshopBaseData.BaseModels;
-
-namespace FanshopDbEF
+namespace FanshopDbEF.Models
 {
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
+    using System.Data.Entity.Spatial;
 
     [Table("Customer")]
-    public class Customer : BaseCustomer
+    public partial class Customer
     {
-        public Customer(string firstName, string lastName, string phone, string email, DateTime? dateOfBirth)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            Phone = phone;
-            Email = email;
-            DateOfBirth = dateOfBirth;
-        }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Customer() => Orders = new HashSet<Order>();
+        public Customer()
+        {
+            Orders = new HashSet<Order>();
+        }
+
+        public int Id { get; set; }
 
         [Required]
         [StringLength(20)]
