@@ -45,9 +45,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\FanshopDbDAL\FanshopBaseData.csproj">
       <Project>{561688d4-c577-4b10-9c47-48c5d84b7bc0}</Project>
       <Name>FanshopBaseData</Name>
